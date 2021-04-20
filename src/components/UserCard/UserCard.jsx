@@ -14,7 +14,9 @@ import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ShareIcon from '@material-ui/icons/Share';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: red[500],
   },
+  actionButton: {
+      textAlign: 'center'
+  }
 }));
 
 const UserCard = () => {
@@ -61,13 +66,22 @@ const UserCard = () => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteBorderIcon />
-          {/* <FavoriteIcon /> */}
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+        <Grid item xs={4} className={classes.actionButton}>
+            <IconButton aria-label="add to favorites">
+                <FavoriteBorderIcon />
+                {/* <FavoriteIcon /> */}
+            </IconButton>
+        </Grid>
+        <Grid item xs={4} className={classes.actionButton}>
+            <IconButton aria-label="share">
+                <EditIcon />
+            </IconButton>
+        </Grid>
+        <Grid item xs={4} className={classes.actionButton}>
+            <IconButton>
+                <DeleteIcon />
+            </IconButton>          
+        </Grid>
       </CardActions>
     </Card>
   );
