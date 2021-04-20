@@ -1,0 +1,26 @@
+.userDetailsContainer{
+    padding: 0 16px;
+}
+
+.userImage{
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.userImage > img{
+    width: 200px;
+    height: 200px;
+}
+
+.userName{
+    margin: 10px 0;
+}
+
+.userDetail{
+    display: flex;
+}
+
+.userDetailText{
+    padding: 0 10px;
+}

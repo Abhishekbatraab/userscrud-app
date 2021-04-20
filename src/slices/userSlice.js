@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { instance } from '../../src/api/globalAxios'
 
 const initialState = {
     users: []
@@ -10,6 +11,13 @@ const userSlice = createSlice({
     reducer: {
         getUsers: (state, action)=>{
             //get users from api
+            // instance({
+            //     method: 'get',
+            //     url: '/users'
+            // })
+            // .then(response=>{
+            //     console.log("Response in getusers", response);
+            // })
         },
         addUser: (state, action)=> {
             //write code to add user
